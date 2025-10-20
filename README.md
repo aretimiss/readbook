@@ -112,7 +112,31 @@ npm install --save-dev gh-pages
 npm run deploy
 ```
 
-### Netlify/Vercel
+### Netlify
+
+1. **สร้างบัญชี Netlify**
+   - ไปที่ [netlify.com](https://netlify.com)
+   - สมัครด้วย GitHub account
+
+2. **Deploy จาก GitHub**
+   - คลิก "New site from Git"
+   - เลือก GitHub repository
+   - Branch: `main`
+   - Build command: `npm run build`
+   - Publish directory: `build`
+
+3. **ตั้งค่า Environment Variables**
+   - ไปที่ Site Settings → Environment Variables
+   - เพิ่ม:
+     - `REACT_APP_API_KEY_IDENTITY`
+     - `REACT_APP_API_KEY_CREDENTIAL`
+     - `REACT_APP_API_BASE_URL`
+
+4. **Deploy**
+   - คลิก "Deploy site"
+   - รอสักครู่จะได้ URL ฟรี
+
+### Vercel
 
 1. เชื่อมต่อ GitHub repository
 2. ตั้งค่า environment variables
